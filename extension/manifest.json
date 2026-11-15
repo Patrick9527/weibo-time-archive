@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "微博时光档案",
+  "version": "0.1.0",
+  "description": "在本地备份自己的微博，导出 JSON 与可搜索的微博样式 HTML 档案。",
+  "minimum_chrome_version": "110",
+  "permissions": ["activeTab", "scripting", "storage", "downloads", "unlimitedStorage"],
+  "action": {"default_title": "备份我的微博"},
+  "background": {"service_worker": "background.js", "type": "module"},
+  "icons": {"16": "icons/16.png", "48": "icons/48.png", "128": "icons/128.png"},
+  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'"}
+}
